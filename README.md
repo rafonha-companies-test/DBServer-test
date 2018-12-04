@@ -6,10 +6,10 @@ This is a test to a Front-end developer job. I planned to use the following tech
 - Bootstrap 4 (https://getbootstrap.com/) - I'll use it to facilitate the HTML to do a responsive design;
 - Jest (https://jestjs.io/) - I'll use it to test all the elements (unit test using mock).
 
-# Highlights of my logic/code writing style
+## Highlights of my logic/code writing style
 
-# What could have been done in a better way
+## What could have been done in a better way
 
-# FAQ
+## FAQ
 
-# Notes
+## Notes
