@@ -3,9 +3,9 @@
 This is a test to a Front-end developer job. I planned to use the following technologies:
 
 - VanillaJS is the basis of this project; 
-- HTML and CSS only to see the code in acton.
+- HTML and CSS only to see the code in action.
 
-I intended to create a simple alert code, simulating the temperarutes outside the truck and inside each beer container. Every time the HTML is reloaded, the temperature changes (simulating opening the truck, for example), and a new alert appears.
+I intended to create a simple alert code, simulating the temperatures outside the truck and inside each beer container. Every time the HTML is reloaded, the temperature changes (simulating opening the truck, for example), and a new alert appears.
 
 
 ## Highlights of my logic/code writing style
@@ -18,6 +18,8 @@ I wanted to be able to see the application as a user, so I did a simple HTML to 
 ### 3) Best practices
 I tried to follow all the best practices to make the code simple, clean and easy to understand. 
 
+### 4) Commenting the code
+I hope the code is well commented, so there is no doubt about its uses.
 
 ## What could have been done in a better way
 ### 1) MVC model
