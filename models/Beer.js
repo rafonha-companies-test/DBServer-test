@@ -1,7 +1,8 @@
 class Beer {
-    constructor(max, min) {
-        this._maxTemperature = max;
+    constructor(min, max, internal) {
         this._minTemperature = min;
+        this._maxTemperature = max;
+        this._internalTemperature = internal;
 
         Object.freeze(this);
     }
@@ -12,6 +13,10 @@ class Beer {
 
     get minTemp() {
         return this._minTemperature;
+    }
+
+    get internalTemp() {
+        return this._internalTemperature;
     }
 
 }
