@@ -1,5 +1,32 @@
 //Import class Beer
-import Beer from './models/Beer.js';
+class Beer {
+
+    constructor(name, min, max, internal) {
+        this._beerName = name;
+        this._minTemperature = min;
+        this._maxTemperature = max;
+        this._internalTemperature = internal;
+
+        Object.freeze(this);
+    }
+
+    get beerName() {
+        return this._beerName;
+    }
+
+    get minTemp() {
+        return this._minTemperature;
+    }
+
+    get maxTemp() {
+        return this._maxTemperature;
+    }
+
+    get internalTemp() {
+        return this._internalTemperature;
+    }
+
+}
 
 //Function to get random temperature
 function getRndTemperature(min, max) {
@@ -87,7 +114,7 @@ rightTemp(stout.minTemp, stout.maxTemp, stout.internalTemp);
 
 //Wheat beer container
 var wBeerTemp = internalTemp(temperatureNow, 3);
-var wBeer = new Beer('Wheat beer', 3, 5, swBeerTemp);
+var wBeer = new Beer('Wheat beer', 3, 5, wBeerTemp);
 
 document.getElementById("wBeerTemp").innerHTML = wBeerTemp;
 

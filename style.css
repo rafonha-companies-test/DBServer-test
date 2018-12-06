@@ -5,3 +5,7 @@
 .flex {
     display: inline-flex;
 }
+
+p{
+    text-align: center;
+}
