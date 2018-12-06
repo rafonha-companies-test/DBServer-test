@@ -67,7 +67,7 @@ function rightTemp(beer, min, max, internal) {
             return alert("The temperature of the container of " + beer + " is " + internal + " and is out of its specific refrigeration temperature, please check!");
         }
 
-        return alert("The temperature of the " + beer + " container is: " + internal);
+        return console.log("The temperature of the " + beer + " container is: " + internal);
 
     } catch (err) {
         alert("Something went wrong, try again.");
@@ -85,7 +85,7 @@ var pilsner = new Beer('Pilsner', 4, 6, pilsnerTemp);
 
 document.getElementById("pilsnerTemp").innerHTML = pilsnerTemp;
 
-rightTemp(pilsner.minTemp, pilsner.maxTemp, pilsner.internalTemp);
+rightTemp(pilsner.beerName, pilsner.minTemp, pilsner.maxTemp, pilsner.internalTemp);
 
 
 //IPA container
@@ -94,7 +94,7 @@ var ipa = new Beer('IPA', 5, 6, ipaTemp);
 
 document.getElementById("ipaTemp").innerHTML = ipaTemp;
 
-rightTemp(ipa.minTemp, ipa.maxTemp, ipa.internalTemp);
+rightTemp(ipa.beerName, ipa.minTemp, ipa.maxTemp, ipa.internalTemp);
 
 //Lager container
 var lagerTemp = internalTemp(temperatureNow, 4);
@@ -102,7 +102,7 @@ var lager = new Beer('Lager', 4, 7, lagerTemp);
 
 document.getElementById("lagerTemp").innerHTML = lagerTemp;
 
-rightTemp(lager.minTemp, lager.maxTemp, lager.internalTemp);
+rightTemp(lager.beerName, lager.minTemp, lager.maxTemp, lager.internalTemp);
 
 //Stout container
 var stoutTemp = internalTemp(temperatureNow, 6);
@@ -110,7 +110,7 @@ var stout = new Beer('Stout', 6, 8, stoutTemp);
 
 document.getElementById("stoutTemp").innerHTML = stoutTemp;
 
-rightTemp(stout.minTemp, stout.maxTemp, stout.internalTemp);
+rightTemp(stout.beerName, stout.minTemp, stout.maxTemp, stout.internalTemp);
 
 //Wheat beer container
 var wBeerTemp = internalTemp(temperatureNow, 3);
@@ -118,7 +118,7 @@ var wBeer = new Beer('Wheat beer', 3, 5, wBeerTemp);
 
 document.getElementById("wBeerTemp").innerHTML = wBeerTemp;
 
-rightTemp(wBeer.minTemp, wBeer.maxTemp, wBeer.internalTemp);
+rightTemp(wBeer.beerName, wBeer.minTemp, wBeer.maxTemp, wBeer.internalTemp);
 
 //Pale Ale container
 var pAleTemp = internalTemp(temperatureNow, 4);
@@ -126,5 +126,5 @@ var pAle = new Beer('Pale Ale', 4, 6, pAleTemp);
 
 document.getElementById("pAleTemp").innerHTML = pAleTemp;
 
-rightTemp(pAle.minTemp, pAle.maxTemp, pAle.internalTemp);
+rightTemp(pAle.beerName, pAle.minTemp, pAle.maxTemp, pAle.internalTemp);
 
