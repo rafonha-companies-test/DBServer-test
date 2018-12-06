@@ -1,6 +1,11 @@
 //Function to get random temperature
 function getRndTemperature(min, max) {
-    return Math.floor(Math.random() * (max - min)) + min;
+
+    try {
+        return Math.floor(Math.random() * (max - min)) + min;
+    } catch (err) {
+        alert("Something went wrong with the random function, try again.");
+    }
 }
 
 //Controls if the beer container is in the right temperature
