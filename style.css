@@ -1,3 +1,7 @@
-﻿.flex {
+﻿.container{
+    margin: 20px 300px;
+}
+
+.flex {
     display: inline-flex;
 }

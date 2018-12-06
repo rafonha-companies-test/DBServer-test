@@ -1,3 +1,6 @@
+//Import class Beer
+import Beer from './models/Beer.js';
+
 //Function to get random temperature
 function getRndTemperature(min, max) {
 
@@ -29,15 +32,15 @@ function internalTemp(now, min) {
     }
 }
 
-//Controls if the beer container is in the right temperature
-function rightTemp(min, max, internal) {
+//Function that controls if the container is in the right temperature
+function rightTemp(beer, min, max, internal) {
 
     try {
         if (internal > (max + 1) || internal < (min - 1)) {
-            return alert("The temperature of the container is " + internal + " and is out of its specific refrigeration temperature, please check!");
+            return alert("The temperature of the container of " + beer + " is " + internal + " and is out of its specific refrigeration temperature, please check!");
         }
 
-        return alert("The temperature of this container is: " + internal);
+        return alert("The temperature of the " + beer + " container is: " + internal);
 
     } catch (err) {
         alert("Something went wrong, try again.");
@@ -51,49 +54,50 @@ document.getElementById("temperatureNow").innerHTML = temperatureNow;
 
 //Pilsner container
 var pilsnerTemp = internalTemp(temperatureNow, 4);
-var pilsner = new Beer(4, 6, pilsnerTemp);
+var pilsner = new Beer('Pilsner', 4, 6, pilsnerTemp);
 
-function pilsnerCheck() {
-    rightTemp(pilsner.minTemp, pilsner.maxTemp, pilsner.internalTemp);
-}
+document.getElementById("pilsnerTemp").innerHTML = pilsnerTemp;
+
+rightTemp(pilsner.minTemp, pilsner.maxTemp, pilsner.internalTemp);
+
 
 //IPA container
 var ipaTemp = internalTemp(temperatureNow, 5);
-var ipa = new Beer(5, 6, ipaTemp);
+var ipa = new Beer('IPA', 5, 6, ipaTemp);
 
-function ipaCheck() {
-    rightTemp(ipa.minTemp, ipa.maxTemp, ipa.internalTemp);
-}
+document.getElementById("ipaTemp").innerHTML = ipaTemp;
+
+rightTemp(ipa.minTemp, ipa.maxTemp, ipa.internalTemp);
 
 //Lager container
 var lagerTemp = internalTemp(temperatureNow, 4);
-var lager = new Beer(4, 7, lagerTemp);
+var lager = new Beer('Lager', 4, 7, lagerTemp);
 
-function lagerCheck() {
-    rightTemp(lager.minTemp, lager.maxTemp, lager.internalTemp);
-}
+document.getElementById("lagerTemp").innerHTML = lagerTemp;
+
+rightTemp(lager.minTemp, lager.maxTemp, lager.internalTemp);
 
 //Stout container
 var stoutTemp = internalTemp(temperatureNow, 6);
-var stout = new Beer(6, 8, stoutTemp);
+var stout = new Beer('Stout', 6, 8, stoutTemp);
 
-function stoutCheck() {
-    rightTemp(stout.minTemp, stout.maxTemp, stout.internalTemp);
-}
+document.getElementById("stoutTemp").innerHTML = stoutTemp;
+
+rightTemp(stout.minTemp, stout.maxTemp, stout.internalTemp);
 
 //Wheat beer container
 var wBeerTemp = internalTemp(temperatureNow, 3);
-var wBeer = new Beer(3, 5, swBeerTemp);
+var wBeer = new Beer('Wheat beer', 3, 5, swBeerTemp);
 
-function wBeerCheck() {
-    rightTemp(wBeer.minTemp, wBeer.maxTemp, wBeer.internalTemp);
-}
+document.getElementById("wBeerTemp").innerHTML = wBeerTemp;
+
+rightTemp(wBeer.minTemp, wBeer.maxTemp, wBeer.internalTemp);
 
 //Pale Ale container
 var pAleTemp = internalTemp(temperatureNow, 4);
-var pAle = new Beer(4, 6, pAleTemp);
+var pAle = new Beer('Pale Ale', 4, 6, pAleTemp);
 
-function pAleCheck() {
-    rightTemp(pAle.minTemp, pAle.maxTemp, pAle.internalTemp);
-} 
+document.getElementById("pAleTemp").innerHTML = pAleTemp;
+
+rightTemp(pAle.minTemp, pAle.maxTemp, pAle.internalTemp);
 

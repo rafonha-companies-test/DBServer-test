@@ -1,11 +1,16 @@
-class Beer {
+export default class Beer {
 
-    constructor(min, max, internal) {
+    constructor(name, min, max, internal) {
+        this._beerName = name;
         this._minTemperature = min;
         this._maxTemperature = max;
         this._internalTemperature = internal;
 
         Object.freeze(this);
+    }
+
+    get beerName() {
+        return this._beerName;
     }
 
     get minTemp() {

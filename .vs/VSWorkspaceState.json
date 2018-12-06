@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\controllers",
+    "\\models"
   ],
-  "SelectedNode": "\\index.html",
+  "SelectedNode": "\\models\\Beer.js",
   "PreviewInSolutionExplorer": false
 }
